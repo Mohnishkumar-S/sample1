@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Alike&family=Arima:wght@100..700&family=Cal+Sans&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@import "tailwindcss";
+
+
+@theme{
+  --font-arima:'Arima'
+}
+
+@keyframes slideDown {
+    0%{
+        transform: translate(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(20px);
+        opacity: 1;
+    }
+    
+}
+
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(to bottom, rgba(0, 217, 255, 0.2) 0%, transparent 17%),
+    radial-gradient(circle at top left, rgba(0, 217, 255, 0.3) 0%, transparent 30%),
+    radial-gradient(circle at top right, rgba(0, 217, 255, 0.3) 0%, transparent 30%),
+    radial-gradient(circle at bottom left, rgba(0, 217, 255, 0.3) 0%, transparent 30%),
+    radial-gradient(circle at bottom right, rgba(0, 217, 255, 0.3) 0%, transparent 30%);
+  pointer-events: none;
+  z-index: -1;
+}
+
